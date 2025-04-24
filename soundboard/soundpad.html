@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundPad Sarau</title>
+</head>
+<body>
+    <button onclick="passaros()">pássaros</button>
+    <button onclick="ventos()">vento</button>
+    <button onclick="ventoFolha()">vento com folhas</button>
+    <button onclick="trombetas()">trombetas</button>
+    <button onclick="passos()">passos</button>
+    <button onclick="passaros(), ventos()">vento com passaros</button>
+    <audio src="audios/passaros.mp3" id="passaros"></audio>
+    <audio src="audios/vento.mp3" id="vento"></audio>
+    <audio src="audios/som-de-vento-com-folhas.mp3" id="vento-folha"></audio>
+    <audio src="audios/.mp3" id="trombetas"></audio>
+    <audio src="audios/passos.mp3" id="passos"></audio>
+    <audio src="audios/.mp3" id="vento-folha"></audio>
+    <audio src="audios/passaros.mp3" id="vento-folha"></audio>
+    <audio src="audios/passaros.mp3" id="vento-folha"></audio>
+    <audio src="audios/passaros.mp3" id="vento-folha"></audio>
+    <script>
+        const passaro = document.getElementById("passaros");
+        const vento = document.getElementById("vento");
+        const trombeta = document.getElementById("trombetas");
+        const passo = document.getElementById("passos");
+        const vento_folha = document.getElementById("vento-folha");
+        
+
+        function passaros(){
+            passaro.play();
+        }
+        function ventos(){
+            vento.play();
+        }
+        function ventoFolha(){
+            vento_folha.play();
+        }
+        function trombetas(){
+            trombeta.play();
+        }
+        function passos(){
+            passo.play();
+        }
+    </script>
+    
+</body>
+</html>
