@@ -4,30 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SoundPad Sarau</title>
+    <style>
+        *{
+            font-family: arial;
+            color: aliceblue;
+            background-color: #262626;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button{
+            margin: 10px;
+            width: 300px;
+            height: 100px;
+            border-radius: 20px;
+            border: solid, medium, aliceblue;
+            background-color: cornflowerblue;
+        }
+    </style>
 </head>
 <body>
-    <button onclick="passaros()">pássaros</button>
-    <button onclick="ventos()">vento</button>
-    <button onclick="ventoFolha()">vento com folhas</button>
-    <button onclick="trombetas()">trombetas</button>
-    <button onclick="passos()">passos</button>
-    <button onclick="passaros(), ventos()">vento com passaros</button>
+    <div>
+        <h1>Efeitos Sonoros</h1>
+        <button onclick="passaros()">pássaros</button>
+        <button onclick="ventos()">vento</button>
+        <button onclick="ventoFolha()">vento com folhas</button>
+        <button onclick="trombetas()">trombetas</button>
+        <button onclick="passos()">passos</button>
+        <button onclick="passaros(), ventos()">vento com passaros</button>
+        <button onclick="marchas()">Marcha</button>
+        <button onclick="musicaEterea()">Etéreo</button>
+        <button onclick="jogo()">O jogo</button><br><br>
+        <button onclick="stop()" style="background-color: rgb(255, 18, 73);">Parar audio</button>
+    </div>
     <audio src="audios/passaros.mp3" id="passaros"></audio>
     <audio src="audios/vento.mp3" id="vento"></audio>
     <audio src="audios/som-de-vento-com-folhas.mp3" id="vento-folha"></audio>
-    <audio src="audios/.mp3" id="trombetas"></audio>
+    <audio src="audios/trombetaReal.mp3" id="trombetas"></audio>
     <audio src="audios/passos.mp3" id="passos"></audio>
-    <audio src="audios/.mp3" id="vento-folha"></audio>
-    <audio src="audios/passaros.mp3" id="vento-folha"></audio>
-    <audio src="audios/passaros.mp3" id="vento-folha"></audio>
-    <audio src="audios/passaros.mp3" id="vento-folha"></audio>
+    <audio src="audios/marcha.mp3" id="marcha"></audio>
+    <audio src="audios/apito.mp3" id="apito"></audio>
+    <audio src="audios/audiencia.mp3" id="audiencia"></audio>
+    <audio src="audios/etereo.mp3" id="etereo"></audio>
     <script>
         const passaro = document.getElementById("passaros");
         const vento = document.getElementById("vento");
         const trombeta = document.getElementById("trombetas");
         const passo = document.getElementById("passos");
         const vento_folha = document.getElementById("vento-folha");
-        
+        const marcha = document.getElementById("marcha");
+        const apito = document.getElementById("apito");
+        const audiencia = document.getElementById("audiencia");
+        const etereo = document.getElementById("etereo");
 
         function passaros(){
             passaro.play();
@@ -43,6 +74,36 @@
         }
         function passos(){
             passo.play();
+        }
+        function marchas(){
+            marcha.play();
+        }
+        function jogo(){
+            apito.play();
+            audiencia.play();
+        }
+        function musicaEterea(){
+            etereo.play();
+        }
+        function stop(){
+            passo.pause();
+            passaro.pause();
+            vento.pause();
+            vento_folha.pause();
+            trombeta.pause();
+            marcha.pause();
+            audiencia.pause();
+            etereo.pause();
+            apito.pause();
+            passo.currentTime = 0;
+            passaro.currentTime = 0;
+            vento.currentTime = 0;
+            vento_folha.currentTime = 0;
+            trombeta.currentTime = 0;
+            apito.currentTime = 0;
+            audiencia.currentTime = 0;
+            marcha.currentTime = 0;
+            etereo.currentTime = 0;
         }
     </script>
     
